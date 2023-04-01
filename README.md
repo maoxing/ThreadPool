@@ -19,7 +19,7 @@ int main()
     pool.start();
 
     //dispatch one task
-    pool.dispatchTask([]() { std::count<< "Hello World" << endl });
+    pool.dispatchTask([]() { std::count<< "Hello World" << endl; });
 
     //stop threadpool
     pool.stop();
