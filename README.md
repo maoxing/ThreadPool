@@ -12,14 +12,14 @@ Basic usage
 
 int main()
 {
-    // create thread pool with 4 worker threads
+    // create thread pool
     ThreadPool pool;
 
     //start pool
     pool.start();
 
     //dispatch one task
-    pool.dispatchTask([]() { std::count<< "Hello World" << std::endl; });
+    pool.dispatchTask([]() { std::cout<< "Hello World" << std::endl; });
 
     //stop threadpool
     pool.stop();
