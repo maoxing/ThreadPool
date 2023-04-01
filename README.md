@@ -21,7 +21,7 @@ int main()
     //dispatch one task
     pool.dispatchTask([]() { std::cout<< "Hello World" << std::endl; });
 
-    //stop threadpool
+    //stop thread pool
     pool.stop();
     
     return 0;
