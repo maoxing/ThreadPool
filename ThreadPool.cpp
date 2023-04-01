@@ -1,8 +1,6 @@
 
 #include "ThreadPool.h"
 
-NS_IGAME_BEGIN
-
 uint8_t const ThreadPool::CPU_CORE_COUNT   = std::thread::hardware_concurrency();
 uint8_t const ThreadPool::MAX_THREAD_COUNT = CPU_CORE_COUNT - 1;
 
@@ -54,5 +52,3 @@ void ThreadPool::addThread() {
 
     _workers.emplace_back(workerLoop);
 }
-
-NS_IGAME_END
