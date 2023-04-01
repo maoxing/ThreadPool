@@ -1,7 +1,6 @@
 
 #pragma once
 
-#include "igame.h"
 #include <atomic>
 #include <cassert>
 #include <cstdint>
@@ -11,8 +10,6 @@
 #include "Event.h"
 #include "base/std/container/list.h"
 #include "concurrentqueue/concurrentqueue.h"
-
-NS_IGAME_BEGIN
 
 class ThreadPool final {
 public:
@@ -59,5 +56,3 @@ auto ThreadPool::dispatchTask(Function &&func, Args &&...args) -> std::future<de
     _event.signal();
     return task->get_future();
 }
-
-NS_IGAME_END
