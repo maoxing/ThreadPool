@@ -8,7 +8,6 @@
 #include <future>
 #include <thread>
 #include "Event.h"
-#include "base/std/container/list.h"
 #include "concurrentqueue/concurrentqueue.h"
 
 class ThreadPool final {
